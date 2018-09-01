@@ -1,0 +1,188 @@
+<section class="section-features"> 
+    <h1 class="heading-primary">Systems and Computer Networks Projects</h1>              
+    <div class="row">
+        <div class="col-md-4">
+            <div class="feature-box">
+                <h3 class="heading-tertiary u-margin-bottom-small">Asynchronous file system</h3>
+                <p class="feature-box__text">
+                    Designed and developed a Linux kernel-based file system to handle file processing operations like encryption and/or compression synchronously in case of small files (4KB and smaller) and asynchronously for larger files using work queues. 
+                    It supports a special trash bin folder to store deleted files with support for compression to save space, encryption to protect the data, periodic deletion as well as support to purge the trash bin folder.
+                    Information like the work queue length, max number of files allowed in the trash bin and also the key for encrypting the data were stored in the proc filesystem.
+                </p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="skills">C</p>
+                    </div>
+                </div>
+                <div class="tutorial">
+                    <a href="#" class="btn-text">Tutorial &rarr;</a>
+                </div>
+                <div class="code">
+                    <a href="#" class="btn-text">Source Code &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box">
+                <h3 class="heading-tertiary u-margin-bottom-small">File Systems </h3>
+                <p class="feature-box__text">
+                    Designed and Developed a secured garbage file system in linux 4.2 as a stackable file system. It is similar to a trash bin with an additional feature of encryption.
+                    The data is first encrypted before moving it to the trash bin. The users can only see the files which are deleted by the user itself to prevent the accidental deletion of other user’s files.
+                    Designed and developed a new system call for linux 4.2 which takes the two files as input, compares them and if they are identical to each other then it hard links or deduplicates the two files to free up some space on the hard disk.
+                </p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="skills">C</p>
+                    </div>
+                </div>
+                <div class="tutorial">
+                    <a href="#" class="btn-text">Tutorial &rarr;</a>
+                </div>
+                <div class="code">
+                    <a href="#" class="btn-text">Source Code &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box">
+                <h3 class="heading-tertiary u-margin-bottom-small">Distance Vector Routing</h3>
+                <p class="feature-box__text">
+                    Designed a network topology with two hosts and four routers and then configured static routing for the topology using mininet and later replaced with dynamic routing by changing the RIP demon of the four routers using quagga.
+                    This configuration has been further utilized in developing an application layer routing protocol which implements distance vector routing using Bellman ford algorithm through 
+                    a TCP connection between the routers and the hosts. Each of the routers and the hosts keep on updating their routing tables so as to attain the minimum distance between each other. Each of the hosts and the routers act as the server as well as client.
+                </p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="skills">Python</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="skills">Mininet</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="skills">Quagga</p>
+                    </div>
+                </div>
+                <div class="tutorial">
+                    <a href="#" class="btn-text">Tutorial &rarr;</a>
+                </div>
+                <div class="code">
+                    <a href="#" class="btn-text">Source Code &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="feature-box">
+                <h3 class="heading-tertiary u-margin-bottom-small">Byzantine Chain Replication</h3>
+                <p class="feature-box__text">
+                    Developed a Byzantine chain replication (BCR) as described in the paper published by Robbert van Renesse, Chi Ho, and Nicolas Schiper, Byzantine Chain Replication, Proceedings of the 16th International Conference on Principles of Distributed Systems.
+                    This system consists of an Olympus which supplies the required number of replicas which include the head replica as well as the tail replica.
+                    Whenever the client requests for an operation like the insertion, updating or deletion, it initiates the operation at the head replica and then this operation is further forwarded to the other replicas and the result at each replica is forwarded which finally reaches the tail replica and then the tail replica returns the result to the client.
+                    During this process if any misbehavior is detected by any of the replicas or the client or if any replica goes down, then each of the cases are handled appropriately either by replacing the faulty replica or replacing the entire set of replicas only after storing the current state of the system.
+                </p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="skills">Python</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="skills">pyDistAlgo</p>
+                    </div>
+                    <div class="col-md-4">
+                        <p class="skills">pyNacl</p>
+                    </div>
+                </div>
+                <div class="tutorial">
+                    <a href="#" class="btn-text">Tutorial &rarr;</a>
+                </div>
+                <div class="code">
+                    <a href="#" class="btn-text">Source Code &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box">
+                <h3 class="heading-tertiary u-margin-bottom-small">Plugboard Proxy</h3>
+                <p class="feature-box__text">
+                    Designed and developed a proxy application for adding an extra layer of encryption to connections towards TCP services. Instead of connecting directly to the server, clients initially  connect to this application (running on the same server), which then relays all traffic to the actual server. Before relaying the traffic, this application decrypts it using a static symmetric key. 
+                    This prevents the server from the attackers who might want to exploit a vulnerability in the protected service as they will first have to know the secret key for having a chance to successfully deliver their attack vector to the server.
+                    Clients who want to access the protected server should proxy their traffic through a local instance of this application, which will encrypt the traffic using the same symmetric key used by the server.
+                </p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="skills">C</p>
+                    </div>
+                </div>
+                <div class="tutorial">
+                    <a href="#" class="btn-text">Tutorial &rarr;</a>
+                </div>
+                <div class="code">
+                    <a href="#" class="btn-text">Source Code &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box">
+                <h3 class="heading-tertiary u-margin-bottom-small">DNS Packet Injection</h3>
+                <p class="feature-box__text">
+                    Designed and Developed an on-path DNS packet injector and a passive DNS poisoning attack detector.
+                    The DNS packet injector, named 'dnsinject', will capture the traffic from a network interface in promiscuous mode, and attempt to inject forged responses to selected DNS A requests with the goal to poison the resolver cache.
+                    The DNS poisoning attack detector, named 'dnsdetect', will capture the traffic from a network interface in promiscuous mode and detect DNS poisoning attack attempts, such as those generated by dnsinject. Detection is based on identifying duplicate responses towards the same destination that contain different answers for the same A request, i.e the observation of the attacker's spoofed response followed by the server's actual response.
+                </p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="skills">Python</p>
+                    </div>
+                </div>
+                <div class="tutorial">
+                    <a href="#" class="btn-text">Tutorial &rarr;</a>
+                </div>
+                <div class="code">
+                    <a href="#" class="btn-text">Source Code &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="feature-box">
+                <h3 class="heading-tertiary u-margin-bottom-small">Dynamic Routing and Wavelength Assignment in WDM Networks</h3>
+                <p class="feature-box__text">
+                    The main goal of the project was to calculate the blocking probability of the complicated network and the optimal number of wavelengths that can be associated with it. 
+                    Designed and developed a software application which accepts different connection requests and then establishes the connection through the shortest path in a complicated network until all the wavelengths for that path have exhausted and then it moves to the next shortest path. As soon as the communication gets completed it releases the wavelengths of that path and assigns it to the next connection request made.
+                </p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="skills">Python</p>
+                    </div>
+                </div>
+                <div class="tutorial">
+                    <a href="#" class="btn-text">Tutorial &rarr;</a>
+                </div>
+                <div class="code">
+                    <a href="#" class="btn-text">Source Code &rarr;</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="feature-box">
+                <h3 class="heading-tertiary u-margin-bottom-small">Simple Computer Networks Projects</h3>
+                <p class="feature-box__text">
+                    Designed and Developed a passive network monitoring tool using C and libpcap packet capturing library. This software will capture the traffic from a network interface in promiscuous mode or read the packets from a pcap trace file and print a record for each packet in its standard output similar to a simplified version of tcpdump. We can also specify a BPF filter for capturing a subset of the traffic or a string pattern for capturing only packets with matching payloads.
+                    Designed and developed a DNS Resolver from scratch in Java with an extension of DNSSEC to guarantee the integrity of the DNS. Given the ip address as the input it prints the domain name associated with that  ip address and also lets us know if it is dnssec supported or not.
+                </p>
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="skills">C</p>
+                    </div>
+                </div>
+                <div class="tutorial">
+                    <a href="#" class="btn-text">Tutorial &rarr;</a>
+                </div>
+                <div class="code">
+                    <a href="#" class="btn-text">Source Code &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
